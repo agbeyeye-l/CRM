@@ -1,18 +1,19 @@
 from pathlib import Path
-import environ
+# import environ
+import os
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
+# env = environ.Env(
+#     DEBUG=(bool, False)
+# )
 
 # READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
 # if READ_DOT_ENV_FILE:
 #     environ.Env.read_env()
     
-environ.Env.read_env()
+# environ.Env.read_env()
 
-DEBUG = env('DEBUG')
-SECRET_KEY = env('SECRET_KEY')
+DEBUG = False
+SECRET_KEY ='g_l0vo!n*ua0u3(6dq#$0yi-rz^y(1ecd6eemi7z)^-!3nu+a#'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -79,11 +80,11 @@ WSGI_APPLICATION = 'djcrm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_PORT"),
+        'NAME': "ghcrm",
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
 
@@ -130,7 +131,7 @@ STATICFILES_DIRS = [
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = "media_root"
-STATIC_ROOT = "static_root"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 AUTH_USER_MODEL = 'leads.User'
