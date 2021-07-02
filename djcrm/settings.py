@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'djcrm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "ghcrm",
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
+        'NAME': "d3v5l5je9tlnll",
+        'USER': 'hvcxlfljdzysqq',
+        'PASSWORD': '9fe88eb4b022e5131ffb267188d1db061df12bfccc6de780e7c6152e4acf6d84',
+        'HOST': 'ec2-54-74-156-137.eu-west-1.compute.amazonaws.com',
         'PORT': 5432,
     }
 }
