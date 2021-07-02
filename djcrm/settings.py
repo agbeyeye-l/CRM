@@ -5,9 +5,9 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
-if READ_DOT_ENV_FILE:
-    environ.Env.read_env()
+# READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
+# if READ_DOT_ENV_FILE:
+#     environ.Env.read_env()
     
 environ.Env.read_env()
 
@@ -17,7 +17,7 @@ SECRET_KEY = env('SECRET_KEY')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ghcrm.herokuapp.com','localhost']
 
 # Application definition
 
