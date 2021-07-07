@@ -2,18 +2,18 @@ from pathlib import Path
 import environ
 import os
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
+# env = environ.Env(
+#     DEBUG=(bool, False)
+# )
 
 # READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
 # if READ_DOT_ENV_FILE:
 #     environ.Env.read_env()
     
-environ.Env.read_env()
+# environ.Env.read_env()
 
-DEBUG = env('DEBUG')
-SECRET_KEY = env('SECRET_KEY')
+DEBUG = os.environ.get('DEBUG')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'djcrm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
-        'HOST': env('DB_HOST'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': 5432,
     }
 }
