@@ -12,11 +12,10 @@ import os
     
 # environ.Env.read_env()
 
-# DEBUG = os.environ.get('DEBUG')
-# SECRET_KEY = os.environ.get('SECRET_KEY')
+DEBUG = os.environ.get('DEBUG')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG=True
-SECRET_KEY='g_l0vo!n*ua0u3(6dq#$0yi-rz^y(1ecd6eemi7z)^-!3nu+a#'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
