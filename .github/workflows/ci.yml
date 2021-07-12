@@ -24,6 +24,8 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: github-actions
+          DEBUG: True
+          SECRET_KEY: g_l0vo!n*ua0u3(6dq#$0yi-rz^y(1ecd6eemi7z)^-!3nu+a#
         ports: 
           - 5432:5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
