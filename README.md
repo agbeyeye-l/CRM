@@ -1,2 +1,2 @@
 # CRM
-This project helps organizations manage leads
+This project helps organizations manage leads.
